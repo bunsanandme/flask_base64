@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title> sunny_task for {{ username }}</title>
+    </head>
+    <style>
+        .modal {
+            padding: 50px;
+            background: #1a4745;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .result {
+            color: #ffffff;
+        }
+    </style>
+    <body>
+        <div class="modal">
+            <form action="" method="post" novalidate>
+                {{ form.hidden_tag() }}
+                <p>
+                    {{ form.b64_input()}}
+                </p>
+                <p>{{ form.submit() }}</p>
+            </form>
+            <p style="result">{{ result }}</p>
+        </div>
+    </body>
+</html>
